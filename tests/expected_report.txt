@@ -1,0 +1,24 @@
+Transaction Reconciliation Report
+Reading: data/transactions.csv
+
+Transactions by status:
+      9 completed
+      2 pending
+      1 failed
+
+Duplicate transaction IDs:
+TX2004
+
+Negative amounts:
+TX2006,2026-11-03,PL,ZW,USD,-50.00,completed
+
+Missing currency:
+TX2008,2026-11-04,PL,ZW,,95.00,pending
+
+Amounts over 5000:
+TX2009,2026-11-05,ZA,ZW,USD,9999.00,completed
+
+Completed totals by currency:
+USD 10519
+GBP 400
+EUR 190
