@@ -1,0 +1,12 @@
+# Editor and system junk
+*~
+*.swp
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+
+# Secrets: never commit these
+.env
+*.key
