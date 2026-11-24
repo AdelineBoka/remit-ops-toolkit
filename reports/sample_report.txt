@@ -22,3 +22,5 @@ Completed totals by currency:
 USD 10519
 GBP 400
 EUR 190
+
+Result: 4 issue(s) found

@@ -32,3 +32,11 @@ echo
 
 echo "Completed totals by currency:"
 awk -F',' 'NR>1 && $7 == "completed" {total[$5] += $6} END {for (d in total) print d, total[d]}' "$FILE" | sort -k2 -rn
+
+echo
+PROBLEMS=$(( $(tail -n +2 "$FILE" | cut -d',' -f1 | sort | uniq -d | wc -l) + $(awk -F',' 'NR>1 && ($6 < 0 || $5 == "" || $6 > 5000)' "$FILE" | wc -l) ))
+if [ "$PROBLEMS" -gt 0 ]; then
+  echo "Result: $PROBLEMS issue(s) found"
+  exit 1
+fi
+echo "Result: clean"
