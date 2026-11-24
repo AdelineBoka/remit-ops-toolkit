@@ -41,3 +41,8 @@ Built while learning Linux. All data is fictional.
 ```
 
 Runs the report on `data/transactions.csv` and compares it with `tests/expected_report.txt`. Prints PASS (exit code 0) or FAIL with a diff (exit code 1).
+
+## Exit codes
+
+- `0`: the file was read and no problems were found
+- `1`: the file is missing, or duplicates or bad values were found
